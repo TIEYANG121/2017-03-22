@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.nav{
+			width: 1000px;
+			height: 50px;
+			background-color: #000;
+			text-align: center;
+			line-height: 50px;
+		}
+		li{
+			float: left;
+			/*background-color: #eee;*/
+			font-size: 20px;
+			margin-left: 100px;
+			color: #fff;
+			list-style: none;
+		}
+		button{
+			display: none;
+
+			/*overflow: hidden;*/
+			
+		}
+		body .active{
+			display: block;
+		}
+		@media screen and (max-width: 768px){
+			button{
+				display: block;
+				width: 50px;
+				height: 50px;
+			}
+			.nav{ 
+				width: 50px;
+				height: 300px;
+				background-color: #000;
+				display: none;
+			}
+			li{
+			float: none;
+			margin-left: 0;
+			 }
+
+
+		}
+	</style>
+</head>
+<body>
+		<button class="anniu"> medo</button>
+		<ul class="nav">
+			<li>radio</li>
+			<li>movie</li>
+			<li>video</li>
+			<li>music</li>
+			<li>dangsing</li>
+		</ul>
+		<script src="jquery.js"></script>
+		<script >
+			$('button').click(function(){
+				$ ('.nav').toggleClass('active')
+			})
+		</script>
+</body>
+</html>
